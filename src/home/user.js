@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class User extends Component {
+export default class User extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -34,7 +34,13 @@ class User extends Component {
     render() {
         return (
             <div>
-            <button onClick={this.props.onClick.bind(this,'user')}>
+            <button style={{
+            width:'200px',
+                height:'80px',
+                backgroundColor:'yellow',
+                fontSize:'24px',
+                textAlign:'center'
+        }} onClick={this.props.onClick.bind(this,'user')}>
                 {this.props.data.usera} 注销
             </button>
             <p>{this.props.data.date.toLocaleTimeString()}</p>
@@ -64,4 +70,3 @@ class User extends Component {
         );
     }
 }
-export default User;

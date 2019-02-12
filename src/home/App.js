@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import User from './home/user'
-import Gest from './home/gest'
+import User from './user'
+import Gest from './gest'
 
 // class User extends Component {
 //     render() {
@@ -75,7 +75,13 @@ class App extends Component {
             model = <Gest onClick={this.activateLasers}/>
         }
         return(
-            <div className="App">
+            <div style={{
+            width:'200px',
+                height:'80px',
+                backgroundColor:'yellow',
+                fontSize:'24px',
+                textAlign:'center'
+        }} className="App">
             <header className="App-header">
             {model}
                 <NumberCompe numbers={numbers}/>

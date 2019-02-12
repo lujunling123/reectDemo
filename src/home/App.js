@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import User from './user'
-import Gest from './gest'
-import './App.css';
+import User from './home/user'
+import Gest from './home/gest'
 
 // class User extends Component {
 //     render() {

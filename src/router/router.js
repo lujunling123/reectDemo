@@ -1,6 +1,6 @@
-import App from '../src/App'
-import gest from '../src/gest'
-import gestOut from '../src/gestOut'
+import App from '../App'
+import gest from '../gest'
+import gestOut from '../gestOut'
 
 const routes = {
     path: '/',

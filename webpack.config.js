@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -13,6 +14,7 @@ module.exports = {
         vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
     },
     output: {
+        publicPath : './',
         path: path.join(__dirname, './dist'),
         filename: '[name].[chunkhash].js',
         chunkFilename: '[name].[chunkhash].js'
@@ -45,7 +47,8 @@ module.exports = {
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
-        })
+        }),
+        new CleanWebpackPlugin(['dist'])
     ],
     // CommonsChunkPlugin 解决办法 https://www.skiy.net/201803014983.html
     optimization: {

@@ -5,7 +5,8 @@ import {Provider} from 'react-redux';
 import store from './redux/store';
 
 import getRouter from 'router/router';
-
+import './index.css'
+// import { DatePicker } from 'antd';
 /*初始化*/
 renderWithHotReload(getRouter());
 

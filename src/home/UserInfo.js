@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getUserInfo} from "actions/userInfo";
+import {Link} from "react-router-dom";
 
 class UserInfo extends Component {
 
@@ -8,6 +9,7 @@ class UserInfo extends Component {
         const {userInfo, isLoading, errorMsg} = this.props.userInfo;
         return (
             <div>
+
             {
                 isLoading ? '请求信息中......' :
                     (
